@@ -1,0 +1,47 @@
+{%  include('header.html') %}
+
+
+
+ <table class = "table container ">
+ 
+   <tbody>
+      
+    
+      {% for i in data %}
+      <tr class="success">
+         <td colspan="3">
+         <h3>  {{i[1]}} </h3>
+   
+         <h5>{{ i[2]}}</h5>
+         <p >{{ i[3]}}  {{i[4]}}
+         </p>
+    </td>
+         <td class="text-center mt-25"> 
+ <a role="btn" href="/job/{{i[0]}}" class=" btn btn-success active btn-lg ">Apply Now</a>
+ </td>
+      </tr>
+     {% endfor %}</tbody>
+	
+	
+</table>
+
+
+
+
+<div class="text-center container">
+
+  <ul class="pagination ">
+{% for i in range(1,user+1) %}
+{% if page_id ==i %}
+  <li class="page-item active"><a class="page-link" href="/data/{{i}}"> {{i}}  </a></li>
+{% else %}
+    <li class="page-item "><a class="page-link" href="/data/{{i}}">  {{i}}  </a></li>
+
+   {% endif %}
+
+
+{% endfor %}
+  
+   </ul></div>
+ <br>
+  {%include("footer.html")%}

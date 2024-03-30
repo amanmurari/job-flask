@@ -1,0 +1,28 @@
+{%include("header.html")%}
+{%include("nav.html")%}
+
+ <table class = "table container ">
+ 
+   <tbody>
+      
+    
+      {% for i in data %}
+      <tr class="success">
+         <td colspan="3">
+         <h3>{{i[1]}}</h3>
+         <h5>{{ i[2]}}</h5>
+         <p >{{ i[3]}}  {{i[4]}}
+         </p></td>
+         
+         <td class="text-center mt-25"> 
+ <a role="btn" href="job/{{i[0]}}" class=" btn btn-success active btn-lg ">Apply Now</a>
+ </td>
+      </tr>
+     {% endfor %}</tbody>
+	
+	
+</table>
+<div class="text-center">
+<a class="btn btn-primary btn-lg " role="btn" href="/data/1">View all Job</a>
+</div>
+{%include("footer.html")%}
