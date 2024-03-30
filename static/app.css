@@ -1,0 +1,140 @@
+body {
+    font-size: 15pt;
+    overflow-x: hidden
+}
+*{
+ margin: 0;padding: 0;
+ text-decoration: none;
+ box-sizing: border-box;
+ user-select: none;
+}
+nav{
+ background: linear-gradient(red,orangered);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 65px;
+ z-index: 999;
+ position: sticky;
+ top: 0;
+ transition: 1s all;
+}
+nav img{
+ height: 40px;
+ width: 40px;
+ vertical-align: top;
+ margin-left: 40px;
+}
+nav li{
+ float: left;
+ margin-left: 30px;
+ margin-right: 20px;
+ font-weight: bolder;
+ font-size: x-large;
+}
+nav a{
+ color: #20F47D
+}
+nav button, .men button{
+ display: inline;
+ width: 40px;
+ height: 40px;
+ font-size: 29px;
+ font-weight: bolder;
+ margin-left: 22px;
+ margin-top: 4px;
+ color: #fff;
+ background-color: transparent;
+ border: none;
+ display: none;
+}
+.men{
+ width: 100vw;
+ height: 11vw;
+ line-height: 11vh;
+ background-color: #000;
+ display: flex;
+ justify-content: center;
+ display: none;
+ z-index: 222
+}
+
+.slid-cont{
+ width: 100vw;
+ height: 350px;
+ overflow-x: hidden;
+ position: relative;
+ text-align: center;
+}
+#slider{
+ display: flex;
+}
+.slid{
+ width: 100vw;
+ height: 360px;
+}
+.slid-btn{
+ width: 94vw;
+ display: flex;
+ position: absolute;
+ justify-content: space-between;
+ z-index: 200;
+ ;top: calc(340px/2);
+ left: 20px;
+ color: #20F4D2
+}
+.slid-btn button{
+ height: 40px;
+ width: 30px;
+ font-weight: bolder;
+ font-size: 20px;
+ 
+}
+.advatage{
+ overflow: scroll;
+ display: flex;
+column-gap: 13px;
+margin-top: 10px;
+text-align: center;
+ height: 30vh;
+ padding-top: 20px;
+ padding-bottom: 3px;
+   overflow-y: hidden;
+
+}
+.advan{
+ border:  3px gray solid;
+ padding: 10px;
+ border-radius: 10px ;
+}
+.advan img{
+ width: 100px;
+}
+.advan h3{
+ width: 300px;
+ color: rgba(0, 0,0,0.7);
+ font-family: monospace;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+.advan:hover{
+ box-shadow: 2px 12px 12px #adadad;
+ font-weight: bolder;
+ transition: 0.3s all;
+ color: lightsalmon;
+ background: lightblue;
+}
+.advan p{
+ height: 200px;
+ padding-bottom: 3px;
+ overflow: hidden;
+}
+article{
+ display: flex;
+}
+article img{
+ width: 40vw;
+}
+.btn-lg{
+line-height: 100%;
+}
