@@ -34,11 +34,11 @@ class DataBase:
     else:
       return rows
   def apply(data):
-    result = self.conn.execute( f"INSERT INTO User (name,email,job_id,linkdin_url,resume,password) VALUES ('{data['fullname']  }','{data['email']}',{data['job_id']},'{data['linkdin_url']}','{data['resume_url']}','{data['password']}')" )
+    result = self.conn.execute( f"INSERT INTO User (name,email,job_id,linkdin_url,resume,password) VALUES ({random.randint(1,10000000000)},'{data['fullname']  }','{data['email']}',{data['job_id']},'{data['linkdin_url']}','{data['resume_url']}','{data['password']}')" )
     self.conn.commit()
                             
 db=DataBase()
-engine = mysql.connector.connect(user='root', password='root',host='127.0.0.1',database='flask',port=3306)
+engine= sqlite3.connect("job.db",check_same_thread=False)
 conn=engine.cursor()
 
 
@@ -74,6 +74,6 @@ def pagination(id):
                                                   
                                                                                           
 def apply(data):
-    conn.execute( f"INSERT INTO User (name,email,job_id,linkdin_url,resume,password) VALUES ('{data['fullname']  }','{data['email']}',{data['job_id']},'{data['linkdin_url']}','{data['resume_url']}','{data['password']}')" )
+    conn.execute( f"INSERT INTO User (id,name,email,job_id,linkdin_url,resume,password) VALUES ({random.randint(1,10000000000)},{data['fullname']  }','{data['email']}',{data['job_id']},'{data['linkdin_url']}','{data['resume_url']}','{data['password']}')" )
     engine.commit()
 #self.engine.close()
