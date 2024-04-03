@@ -1,5 +1,9 @@
 import mysql.connector
 import time
+import sqlite3
+import random
+
+
 class DataBase:
   def __init__(self,user='root', password='root',host='127.0.0.1',database='flask',port=3306):
     while True:
