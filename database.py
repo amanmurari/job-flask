@@ -37,7 +37,7 @@ class DataBase:
     result = self.conn.execute( f"INSERT INTO User (name,email,job_id,linkdin_url,resume,password) VALUES ({random.randint(1,10000000000)},'{data['fullname']  }','{data['email']}',{data['job_id']},'{data['linkdin_url']}','{data['resume_url']}','{data['password']}')" )
     self.conn.commit()
                             
-db=DataBase()
+#db=DataBase()
 engine= sqlite3.connect("job.db",check_same_thread=False)
 conn=engine.cursor()
 
