@@ -1,5 +1,3 @@
 flask
 gunicorn
 mysql.connector
-sqlite3
-random
